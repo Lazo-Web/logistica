@@ -1,6 +1,6 @@
 # 🚚 Sistema de Logística
 
-Sistema web desarrollado en **Laravel** para la gestión de procesos logísticos, incluyendo administración de envíos, rutas, clientes y control operativo.
+Sistema web desarrollado en **Laravel** para la gestión de procesos logísticos, incluyendo administración de viajes, rutas, clientes y control operativo.
 
 ---
 
@@ -9,7 +9,7 @@ Sistema web desarrollado en **Laravel** para la gestión de procesos logísticos
 Este proyecto tiene como objetivo optimizar la gestión logística mediante una plataforma web que permite:
 
 * Administración de clientes
-* Gestión de envíos y paquetes
+* Gestión de cargas y descargas
 * Control de rutas y entregas
 * Seguimiento de operaciones
 * Panel administrativo
@@ -126,8 +126,8 @@ tests/
 ## 📦 Funcionalidades principales
 
 * Gestión de usuarios y roles
-* Registro de envíos
-* Seguimiento de paquetes
+* Registro de viajes
+* Seguimiento de cargas y descargas
 * Administración de rutas
 * Panel administrativo
 
