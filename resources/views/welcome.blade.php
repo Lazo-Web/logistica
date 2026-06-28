@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ __('Aplicación Transporte por Carretera') }} - {{ config('app.name', 'Laravel') }}</title>
+    <title>{{ __('Transporte') }} - {{ config('app.name', 'Laravel') }}</title>
 
-    <link rel="icon" href="/logo.png" sizes="any">
-  
+    <link rel="icon" href="/logo_1.png" sizes="any">
+
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     @fonts
@@ -88,30 +88,25 @@
 <body class="flex items-center justify-center min-h-screen p-6">
     @if (Route::has('login'))
         <nav class="flex items-center justify-end gap-4">
-                    @auth
-                        <a
-                            href="{{ route('dashboard') }}"
-                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal"
-                        >
-                            Dashboard
-                        </a>
-                    @else
-                        <a
-                            href="{{ route('login') }}"
-                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] text-[#1b1b18] border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm text-sm leading-normal"
-                        >
-                            Log in
-                        </a>
+            @auth
+                <a href="{{ route('admin') }}"
+                    class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
+                    Dashboard
+                </a>
+            @else
+                <a href="{{ route('login') }}"
+                    class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] text-[#1b1b18] border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm text-sm leading-normal">
+                    Log in
+                </a>
 
-                        @if (Route::has('register'))
-                            <a
-                                href="{{ route('register') }}"
-                                class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
-                                Register
-                            </a>
-                        @endif
-                    @endauth
-                </nav>
+                @if (Route::has('register'))
+                    <a href="{{ route('register') }}"
+                        class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
+                        Register
+                    </a>
+                @endif
+            @endauth
+        </nav>
     @endif
     </header>
     <div class="card">
@@ -122,13 +117,12 @@
         </p>
 
         <div style="width: 100%; text-align: center;">
-            <a href="{{ url('/dashboard') }}" class="btn">
+            <a href="{{ url('/admin') }}" class="btn">
                 Entrar a la Aplicación
             </a>
         </div>
 
     </div>
-
     @if (Route::has('login'))
         <div class="h-14.5 hidden lg:block"></div>
     @endif

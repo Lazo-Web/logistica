@@ -9,20 +9,23 @@
     <flux:sidebar sticky collapsible="mobile"
         class="border-e border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900">
         <flux:sidebar.header>
-            <x-app-logo :sidebar="true" href="{{ route('dashboard') }}" wire:navigate />
+            <x-app-logo :sidebar="true" href="{{ route('admin') }}" wire:navigate />
             <flux:sidebar.collapse class="lg:hidden" />
         </flux:sidebar.header>
 
         <flux:sidebar.nav>
             <flux:sidebar.group :heading="__('MENU')" class="grid">
 
-                <flux:sidebar.item icon="home" href="{{ route('dashboard') }}">INICIO</flux:sidebar.item>
-                <flux:sidebar.item icon="users" href="#">CLIENTES</flux:sidebar.item>
-                <flux:sidebar.item icon="truck" href="#">FLOTA</flux:sidebar.item>
-                <flux:sidebar.item icon="user-circle" href="#">CONDUCTORES</flux:sidebar.item>
+                <flux:sidebar.item icon="home" href="{{ route('admin') }}">INICIO</flux:sidebar.item>
+                <flux:sidebar.item icon="home" href="{{ route('admin.clientes') }}" wire:navigate.hover>CLIENTES</flux:sidebar.item>
+
+
+                <flux:sidebar.item icon="truck" href="#">TRACTORA</flux:sidebar.item>
+                <flux:sidebar.item icon="truck" href="#">REMOLQUE</flux:sidebar.item>
+                <flux:sidebar.item icon="user-circle" href="{{ route('admin.conductores.index') }}" wire:navigate.hover>CONDUCTORES</flux:sidebar.item>
                 <flux:sidebar.item href="#"><x-slot:icon><x-tabler-road class="size-5" /></x-slot:icon> RUTAS</flux:sidebar.item>
-                <flux:sidebar.item href="#"><x-slot:icon><x-tabler-road class="size-5" /></x-slot:icon> RUTAS</flux:sidebar.item>
-                <flux:sidebar.item href="#"><x-slot:icon><x-tabler-road class="size-5" /></x-slot:icon> RUTAS</flux:sidebar.item>
+                <flux:sidebar.item href="#"><x-slot:icon><x-tabler-road class="size-5" /></x-slot:icon> PEDIDOS</flux:sidebar.item>
+                <flux:sidebar.item href="#"><x-slot:icon><x-tabler-road class="size-5" /></x-slot:icon> LISTADO</flux:sidebar.item>
                 <flux:sidebar.item href="#"><x-slot:icon><x-tabler-road class="size-5" /></x-slot:icon> RUTAS</flux:sidebar.item>
             </flux:sidebar.group>
         </flux:sidebar.nav>
@@ -89,6 +92,7 @@
     @endpersist
 
     @fluxScripts
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
 </body>
 
 </html>
