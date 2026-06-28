@@ -8,8 +8,7 @@ new class extends Component {
 ?>
 
 <div>
-    @include('components.clientes.⚡nav')
-
+    @include('components.clientes.nav')
 
     <div class="flex justify-end mb-4 mr-10">
         <button type="button" wire:click="showCreateForm"
