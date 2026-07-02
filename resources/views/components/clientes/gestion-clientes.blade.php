@@ -8,16 +8,11 @@ new class extends Component {
 ?>
 
 <div>
-    @include('components.clientes.nav')
+    @include('clientes.nav')
 
-    <div class="flex justify-end mb-4 mr-10">
-        <button type="button" wire:click="showCreateForm"
-            class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-base text-sm px-4 py-2.5 text-center leading-5">Nuevo
-            Cliente</button>
-    </div>
+      <h1 class="flex  justify-center text-2xl  mt-18 uppercase font-bold">clientes</h1>
     <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs
-        rounded-base border border-default">
-        <h2 class="text-lg font-semibold text-heading py-4 px-6 text-center">GESTIÓN DE CLIENTES</h2>
+        rounded-base border border-default mt-15">
         <table class="w-full text-sm text-left rtl:text-right text-body">
             <thead class="bg-neutral-secondary-soft border-b border-default">
                 <tr>
@@ -59,7 +54,7 @@ new class extends Component {
                         968102365
                     </td>
                     <td class="px-6 py-4">
-                        <a href="#" class="font-medium text-fg-brand hover:underline text-red-400">Ver</a>
+                        <a href="#" class="font-medium text-fg-brand hover:underline">Ver</a>
                     </td>
                 </tr>
             </tbody>

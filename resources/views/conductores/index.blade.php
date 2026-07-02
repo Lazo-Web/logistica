@@ -1,27 +1,26 @@
 <x-layouts::app :title="__('Conductores')">
-    <div>
-        <h1 class="flex  justify-center text-2xl font-semibold mb-8 mt-14"> Registro de Conductores</h1>
+ @include('conductores.nav')
+<div>
+        <h1 class="flex  justify-center text-2xl  mt-18 uppercase  font-bold">CONDUCTORES</h1>
 
-        <x-layouts::app.menu>
 
-        </x-layouts::app.menu>
         @if ($conductores->isEmpty())
             <div
                 class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default mt-4">
                 <table class="w-full text-sm text-left rtl:text-right text-body">
-                    <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-default-medium">
+                    <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-default-medium font-bold">
                         <tr>
                             <th scope="col" class="px-6 py-3 font-medium">
                                 Nombre Conductor
                             </th>
                             <th scope="col" class="px-6 py-3 font-medium">
-                                Dni
+                                Color
                             </th>
                             <th scope="col" class="px-6 py-3 font-medium">
-                                Dirección
+                                Category
                             </th>
                             <th scope="col" class="px-6 py-3 font-medium">
-                                Contacto
+                                Price
                             </th>
                             <th scope="col" class="px-6 py-3 font-medium">
                                 <span class="sr-only">Edit</span>
@@ -38,7 +37,7 @@
                         @endforeach
                     </tbody>
                 </table>
-                <h1 class="flex  justify-center text-2xl font-semibold mb-8"> No hay conductores registrados</h1>
+                <h1 class="flex  justify-center text-2xl font-semibold mb-8 font-Poppins mt-4"> No hay conductores registrados</h1>
             </div>
         @else
             <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">

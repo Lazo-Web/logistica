@@ -1,8 +1,8 @@
-<nav class="bg-neutral-primary fixed w-full z-20 top-0 start-0 border-b border-default">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+<nav class="bg-neutral-primary fixed w-full z-20 top-0 inset-s-0 border-b border-default">
+    <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="{{ url('/admin') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="{{ asset('images/logo.png') }}" class="h-7" alt="Flowbite Logo" />
-            <span class="self-center text-xl text-heading font-semibold whitespace-nowrap">Ariosa</span>
+            <span class="self-center text-xl text-heading font-semibold whitespace-nowrap">Transportes</span>
         </a>
         <div class="flex items-center md:order-2">
             <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search"
@@ -17,7 +17,7 @@
             </button>
             <label for="input-group-1" class="sr-only">Nombre</label>
             <div class="relative hidden md:block">
-                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <div class="absolute inset-y-0 inset-s-0 flex items-center ps-3 pointer-events-none">
                     <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                         width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
@@ -25,7 +25,7 @@
                     </svg>
                 </div>
                 <input type="text" id="input-group-1"
-                    class="block w-full ps-9 pe-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-2.5 py-2 shadow-xs placeholder:text-body"
+                    class="block w-full ps-9 pe-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-2.5 shadow-xs placeholder:text-body"
                     placeholder="Nombre">
             </div>
             <button data-collapse-toggle="navbar-search" type="button"
